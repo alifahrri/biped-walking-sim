@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>798</width>
+    <height>526</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Simulator</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="GLWidget" name="glwidget" native="true"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>798</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>&amp;View</string>
+    </property>
+    <addaction name="actionController"/>
+   </widget>
+   <widget class="QMenu" name="menu_Options">
+    <property name="title">
+     <string>&amp;Options</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_Help">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menuView"/>
+   <addaction name="menu_Options"/>
+   <addaction name="menu_Help"/>
+  </widget>
+  <action name="actionExit">
+   <property name="text">
+    <string>E&amp;xit</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>&amp;About</string>
+   </property>
+  </action>
+  <action name="actionController">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Controller</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>GLWidget</class>
+   <extends>QWidget</extends>
+   <header>glwidget.h</header>
+   <container>1</container>
+   <slots>
+    <signal>setStr(QString)</signal>
+    <slot>setXRotation(int)</slot>
+    <slot>setYRotation(int)</slot>
+    <slot>setZRotation(int)</slot>
+    <slot>setJointAngle1(int)</slot>
+    <slot>setJointAngle2(int)</slot>
+    <slot>setJointAngle3(int)</slot>
+    <slot>setJointAngle4(int)</slot>
+    <slot>setJointAngle5(int)</slot>
+    <slot>setJointAngle6(int)</slot>
+    <slot>setJointAngle7(int)</slot>
+    <slot>setJointAngle8(int)</slot>
+    <slot>setJointAngle9(int)</slot>
+    <slot>setJointAngle10(int)</slot>
+    <slot>setJointAngle11(int)</slot>
+    <slot>setJointAngle12(int)</slot>
+    <slot>setJointAngle14(int)</slot>
+    <slot>setJointAngle15(int)</slot>
+    <slot>setJointAngle16(int)</slot>
+    <slot>setJointAngle17(int)</slot>
+    <slot>setJointAngle18(int)</slot>
+    <slot>setJointAngle19(int)</slot>
+    <slot>setJointAngle20(int)</slot>
+    <slot>setJointAngle21(int)</slot>
+    <slot>setJointAngle22(int)</slot>
+    <slot>setJointAngle23(int)</slot>
+    <slot>setJointAngle24(int)</slot>
+    <slot>setJointAngle25(int)</slot>
+    <slot>setLIKx(int)</slot>
+    <slot>setLIKy(int)</slot>
+    <slot>setLIKz(int)</slot>
+    <slot>setRIKx(int)</slot>
+    <slot>setRIKy(int)</slot>
+    <slot>setRIKz(int)</slot>
+    <slot>modeChanged()</slot>
+    <slot>setLIKr(int)</slot>
+    <slot>setLIKp(int)</slot>
+    <slot>setLIKyaw(int)</slot>
+    <slot>setRIKr(int)</slot>
+    <slot>setRIKp(int)</slot>
+    <slot>setRIKyaw(int)</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>369</x>
+     <y>252</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
